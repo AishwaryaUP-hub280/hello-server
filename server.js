@@ -1,12 +1,8 @@
-
-
 const http = require('http');
-
 const server = http.createServer((req, res) => {
     // Log every request
     console.log(`Incoming request: ${req.method} ${req.url}`);
-
-    if (req.url === '/') {
+   if (req.url === '/') {
         res.end("Welcome to Home Page");
     } else if (req.url === '/about') {
         res.end("This is About Page");
@@ -16,7 +12,6 @@ const server = http.createServer((req, res) => {
         res.end("404 Page Not Found");
     }
 });
-
 const PORT = 3000;
 server.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
